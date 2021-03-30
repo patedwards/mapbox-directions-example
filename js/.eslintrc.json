@@ -1,0 +1,7 @@
+{
+  "extends": ["@mapbox/eslint-config-mapbox", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  }
+}

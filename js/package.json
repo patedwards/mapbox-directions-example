@@ -1,0 +1,30 @@
+{
+  "name": "sa-tech-test",
+  "version": "1.0.0",
+  "description": "Solutions Architecture Code Interview",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html --open --no-cache -d build",
+    "build": "parcel build index.html -d build --public-url /demo-template"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-preset-env": "^1.7.0",
+    "parcel-bundler": "^1.12.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapbox/sa-tech-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mapbox/sa-tech-test/issues"
+  },
+  "homepage": "https://github.com/mapbox/sa-tech-test#readme",
+  "dependencies": {
+    "mapbox-gl": "2.1.1"
+  }
+}
