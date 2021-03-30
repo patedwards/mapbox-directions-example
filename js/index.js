@@ -3,6 +3,14 @@ const mapboxgl = require('mapbox-gl');
 mapboxgl.accessToken =
   'pk.eyJ1IjoibWJ4c29sdXRpb25zIiwiYSI6ImNqeWhpandmazAyYmYzYnBtZzJxM3hlM2EifQ.ZLKIqBxG97_HklFj0_1RBQ';
 
+const createMarker = ({color, coords}) => {
+  return new mapboxgl.Marker(
+    {draggable: true, color}
+  )
+    .setLngLat(coords)
+    .addTo(map);
+}
+
 const map = new mapboxgl.Map({
   container: 'map', // container id
   // TODO Add a custom style
@@ -14,9 +22,8 @@ const map = new mapboxgl.Map({
 
 map.on('load', () => {
   // TODO Add Source
-  var marker = new mapboxgl.Marker()
-    .setLngLat([-74.5, 40])
-    .addTo(map);
+  var src_marker = createMarker("green", [-74.5, 40])
+  var snk_marker = createMarker("green", [-74.5, 40.1])
   // TODO Add layers for lines
   // TODO Add draggable point
   // TODO Add a geocoder
